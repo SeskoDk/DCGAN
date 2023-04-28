@@ -1,4 +1,5 @@
 # Root directory for dataset
+# For testing I used the pokemon dataset: https://www.kaggle.com/datasets/rounakbanik/pokemon
 root: "data/new_pokemon"
 
 # Number of workers for dataloader
