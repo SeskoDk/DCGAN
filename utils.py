@@ -34,7 +34,6 @@ def rename_files(source_folder: str, destination_folder: str) -> None:
 def main():
     source_folder = "data/pokemon"
     destination_folder = "data/new_pokemon"
-
     rename_files(source_folder, destination_folder)
 
 
