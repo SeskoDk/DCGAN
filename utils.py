@@ -1,8 +1,19 @@
 import os
 import yaml
 import shutil
+import torch
 from torch import nn
 from typing import Dict
+
+
+class Flatten(nn.Module):
+    @staticmethod
+    def forward(input: torch.Tensor) -> torch.Tensor:
+        """
+        :param input: tensor with shape: B x C x H x W
+        :return: B x C * H * W
+        """
+        return torch.flatten(input, start_dim=1)
 
 
 def weight_init(m: nn.Module) -> None:
