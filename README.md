@@ -6,3 +6,15 @@ It was trained on the [Pokémon dataset](https://www.kaggle.com/kvpratama/pokemo
 <p align="center">
   <img src="pokemon_animation.gif" alt="animated" />
 </p>
+
+By default, the model will be trained with the following hyperparameters:
+* num_epochs: 1000
+* batch_size: 128
+* image_size: 64
+* latent_dim: 100
+* ngf: 64
+* ndf: 64
+* nc: 3
+* lr: 0.0002
+* beta1: 0.5
+* beta2: 0.999
