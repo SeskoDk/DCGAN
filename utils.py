@@ -43,8 +43,8 @@ def rename_files(source_folder: str, destination_folder: str) -> None:
 
 
 def main():
-    source_folder = "data/pokemon"
-    destination_folder = "data/new_pokemon"
+    source_folder = "gen_images"
+    destination_folder = "new_images"
     rename_files(source_folder, destination_folder)
 
 

@@ -1,2 +1,5 @@
 data
 runs
+gen_images
+trained_models
+.idea

@@ -8,6 +8,7 @@ from utils import load_config
 from dataset import ImageDataset
 from torchvision import transforms
 from torchvision.utils import make_grid
+from torchvision.utils import save_image
 from torch.utils.data import DataLoader
 from models import Generator, Discriminator
 from torch.utils.tensorboard import SummaryWriter
@@ -24,6 +25,8 @@ def main():
     EPOCHS = config["num_epochs"]
     IMAGE_SIZE = config["image_size"]
     WORKERS = config["workers"]
+    SAVE_GEN_IMAGES = True
+
 
     dataset = ImageDataset(root=config["root"],
                            transform=transforms.Compose([
@@ -103,6 +106,12 @@ def main():
                     fake_images = generator(fixed_noise).detach().cpu()
                     image_grid = make_grid(fake_images, nrow=4, normalize=True)
                     writer.add_image(tag="Generated images", img_tensor=image_grid, global_step=global_step)
+
+                    if SAVE_GEN_IMAGES:
+                        save_dir = 'gen_images'
+                        os.makedirs(save_dir, exist_ok=True)
+                        image_name = os.path.join(save_dir, f"image_{global_step}.png")
+                        save_image(tensor=image_grid, fp=image_name)
 
             global_step += 1
 
