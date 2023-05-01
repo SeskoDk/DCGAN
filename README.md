@@ -18,3 +18,5 @@ The model will be trained with the following hyperparameters, which are specifie
 * lr: 0.0002
 * beta1: 0.5
 * beta2: 0.999
+
+The training process, using this hyperparameters, takes approximately one hour to complete.
