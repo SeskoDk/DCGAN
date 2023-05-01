@@ -4,5 +4,5 @@ The implementation of the DCGAN was carried out with the primary objective of ga
 It was trained on the Pokemon dataset.
 
 <center>
-![](pokemon_animation.gif)
+![Alt-Text](pokemon_animation.gif)
 </center>
