@@ -7,7 +7,7 @@ It was trained on the [Pokémon dataset](https://www.kaggle.com/kvpratama/pokemo
   <img src="pokemon_animation.gif" alt="animated" />
 </p>
 
-The model will be trained with the following hyperparameters, whic are specified in `config.yaml`:
+The model will be trained with the following hyperparameters, which are specified in `config.yaml`:
 * num_epochs: 1000
 * batch_size: 128
 * image_size: 64
