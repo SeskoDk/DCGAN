@@ -1,5 +1,3 @@
-from typing import Tuple
-
 import torch
 from torch import nn
 from utils import weight_init, Flatten
@@ -37,7 +35,7 @@ class Generator(nn.Module):
         )
         self.apply(weight_init)
 
-    def forward(self, input: torch.Tensor) -> Tuple[torch.Tensor, ...]:
+    def forward(self, input: torch.Tensor) -> torch.Tensor:
         return self.main(input)
 
 
@@ -72,7 +70,7 @@ class Discriminator(nn.Module):
         )
         self.apply(weight_init)
 
-    def forward(self, input: torch.Tensor) -> Tuple[torch.Tensor, ...]:
+    def forward(self, input: torch.Tensor) -> torch.Tensor:
         return self.main(input)
 
 
