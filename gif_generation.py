@@ -2,7 +2,7 @@ import os
 import imageio
 
 
-def get_numeric_name(filename):
+def get_numeric_name(filename: str) -> int:
     first_split = filename.split("_")[1]
     second_split = int(first_split.split(".")[0])
     return second_split
